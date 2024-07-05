@@ -28,4 +28,10 @@ public class EmployeeControllerTest extends BaseTest {
         password=DigestUtils.md5DigestAsHex(password.getBytes());
         System.out.println(password);
     }
+    @Test
+    void getpage(){
+        String password = "123456";
+        password=DigestUtils.md5DigestAsHex(password.getBytes());
+        System.out.println(password);
+    }
 }
