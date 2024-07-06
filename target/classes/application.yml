@@ -17,3 +17,17 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
+# 接口文档配置
+knife4j:
+  enable: true
+  openapi:
+    title: "智能点餐系统接口文档"
+    concat: "大海"
+    version: 1.0
+    group:
+      default:
+        api-rule: package
+        api-rule-resources:
+          - com.dahai.reggie.controller
+reggie:
+  path: F:\upload_img\

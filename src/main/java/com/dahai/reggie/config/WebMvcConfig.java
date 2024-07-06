@@ -1,5 +1,4 @@
 package com.dahai.reggie.config;
-
 import com.dahai.reggie.mapper.JacksonObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -22,9 +21,11 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
         log.info("开始进行静态资源映射...");
         registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
         registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
-        registry.addResourceHandler("swagger-ui.html")
+        registry.addResourceHandler("doc.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
 
+        registry.addResourceHandler("swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }

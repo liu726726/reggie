@@ -22,10 +22,15 @@ public class LoginCheckFilter implements Filter {
         log.info("拦截到的请求:{} ", requestURI);
         //不需要处理的请求路径
         String[] urls = new String[]{
+                "/doc.html",
+                "/swagger-ui.html",
+                "/swagger-resources",
+                "/v2/api-docs",
                 "/employee/login",
                 "/employee/logout",
                 "/backend/**",
-                "/front/**"
+                "/front/**",
+                "/common/**"
         };
         //判断本次请求是否需要处理
         boolean check = check(urls,requestURI);
